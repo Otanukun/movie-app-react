@@ -1,121 +1,154 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
-.App{
-  padding: 30px;
+
+.App {
+	padding: 30px;
 }
-body{
-  background-color: #090a0e;
-  color: #fff;
+
+body {
+	background-color: #090A0E;
+	color: #fff;
 }
+
 .container {
-  position: relative;
-  display: grid;
-  gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	position: relative;
+	display: grid;
+	gap: 15px;
+	grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-items: center;
-  background-color: #0f1014;
-  padding: 15px;
+	background-color: #0F1014;
+	padding: 15px 15px 50px 15px;
 }
-.header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px;
-}
-.movie-container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.movie-cover { 
-    width: 100%;
-}
-.movie-placeholder{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  background: #c1c1c1;
-  color: #0f1014;
-  font-size: 20px;
-  font-weight: bold;
-}
-.movie-title {
-    padding-top: 5px;
-    font-size: 16px;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-    overflow: hidden;
-}
-.hero{
-  position: relative;
-  min-height: 500px;
-  background-size: cover;
-  background-position: top center;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 0px 15px 60px;
-}
-.youtube-container {
- position: absolute;
- top: 0;
- bottom: 0;
- left: 0;
- right: 0;
-}
-.hero .title {
-  font-size: 72px;
-}
-.hero .overview {
-  background-color: #00000066;
-  padding: 10px;
-  border-radius: 5px;
-}
-.hero .button {
-  background-color: #0f1014;
-  color: white;
-  outline: 0;
-  border: 1px solid white;
-  padding: 10px 15px;
-  cursor: pointer;
-  transition: 0.2s;
-}
-.hero .button:hover {
-  background-color: #a0acdf;
-  color: #0f1014;
-}
+
 button {
-  color: #0f1014;
-  background-color: white;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 10px;
-  font-size: 16px;
-  margin: 5px;
-  transition: 0.2s;
+	color: #0F1014;
+	background: #fff;
+	cursor: pointer;
+	padding: 5px 10px;
+	border-radius: 10px;
+	font-size: 16px;
+	margin: 5px;
+	transition: 0.2s;
 }
+
 button:hover {
-  color:  white;
-  background-color: #0f1014;
+	color: #fff;
+	background: #0F1014;
 }
-.btn-load-more {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
-  transform: translateX(50%);
-}
+
 .page-type-current {
-  border: 3px solid red;
-  border-color: red;
-  color: #fff;
-  background: #0F1014;
+	border: 3px solid red;
+	border-color: red;
+	color: #fff;
+	background: #0F1014;
+}
+
+.btn-load-more {
+	position: absolute;
+	bottom: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px;
+}
+
+.movie-container {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+.movie-container:hover .movie-cover{
+	border: 5px solid #a0acdf;
+}
+
+.movie-cover {
+	width: 100%;
+	transition: 0.2s;
+}
+
+.movie-title {
+	padding-top: 5px;
+	font-size: 16px;
+	display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+	overflow: hidden;
+}
+
+.movie-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	color: #0F1014;
+	background: #c1c1c1;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.movie-vote {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background: #0F1014;
+	padding: 2px 8px;
+	border-radius: 5px;
+}
+
+.hero {
+	position: relative;
+	min-height: 500px;
+	background-size: cover;
+	background-position: top center;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 0px 15px 60px;
+}
+
+.hero .title {
+	font-size: 72px;
+}
+
+.hero .overview {
+	background: #00000066;
+	padding: 10px;
+	border-radius: 5px;
+}
+
+.hero .button {
+	background-color: #0F1014;
+	color: #FFF;
+	outline: none;
+	border: 1px solid #FFF;
+	padding: 10px 15px;
+	cursor: pointer;
+	transition: 0.2s;
+}
+
+.hero .button:hover {
+	background-color: #a0acdf;
+	color: #0F1014;
+}
+
+.youtube-container {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
 }
